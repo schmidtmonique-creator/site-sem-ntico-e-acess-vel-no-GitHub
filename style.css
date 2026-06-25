@@ -1,0 +1,153 @@
+/* Configurações Gerais e Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f9f4;
+}
+
+/* Header */
+.main-header {
+    background-color: #2e6f40;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Nav (Menu Funcional) */
+.main-nav {
+    background-color: #1e4628;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    background-color: #2e6f40;
+    outline: none; /* Mantém a acessibilidade por teclado visível via background */
+}
+
+/* Layout Principal (Main com Grid/Flexbox Responsivo) */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column; /* Padrão para celular (Mobile-First) */
+    gap: 2rem;
+}
+
+/* Section e Artigos */
+.articles-section {
+    flex: 3;
+}
+
+.articles-section h2 {
+    color: #2e6f40;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #2e6f40;
+    padding-bottom: 0.5rem;
+}
+
+.blog-post {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.blog-post h3 {
+    color: #1e4628;
+    margin-bottom: 1rem;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.blog-post p {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: #2e6f40;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+.read-more:hover, .read-more:focus {
+    border-bottom: 2px solid #2e6f40;
+}
+
+/* Aside (Barra Lateral) */
+.side-info {
+    flex: 1;
+    background-color: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #2e6f40;
+    height: fit-content;
+}
+
+.side-info h3 {
+    color: #1e4628;
+    margin-bottom: 1rem;
+}
+
+.side-info ul {
+    list-style-type: square;
+    padding-left: 1.2rem;
+}
+
+.side-info li {
+    margin-bottom: 0.8rem;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #1e4628;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+
+/* Responsividade Básica (Telas maiores que 768px) */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row; /* Coloca os artigos e o aside lado a lado */
+    }
+}
